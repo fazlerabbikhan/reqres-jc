@@ -1,4 +1,4 @@
-package com.fazlerabbikhan.reqres.ui.theme
+package com.fazlerabbikhan.reqres.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

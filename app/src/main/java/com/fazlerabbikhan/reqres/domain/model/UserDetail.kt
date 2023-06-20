@@ -5,5 +5,7 @@ data class UserDetail(
     val avatar: String,
     val first_name: String,
     val last_name: String,
-    val email: String
+    val email: String,
+    val supportUrl: String,
+    val supportText: String
 )

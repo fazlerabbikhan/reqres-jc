@@ -12,5 +12,4 @@ interface ReqresApi {
 
     @GET("/api/users/{userId}")
     suspend fun getUserById(@Path("userId") coinId: String): UserDetailDto
-
 }
