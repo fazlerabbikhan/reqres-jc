@@ -23,12 +23,12 @@ data class UserDto(
 //    }
 //}
 
-fun UserDto.toUser(): User {
-    return User(
-        id = data.map { it.id }[0],
-        avatar = data.map { it.avatar }[0],
-        first_name = data.map { it.first_name }[0],
-        last_name = data.map { it.last_name }[0],
-        email = data.map { it.email }[0]
-    )
-}
+//fun UserDto.toUser(): User {
+//    return User(
+//        id = data.map { it.id }[0],
+//        avatar = data.map { it.avatar }[0],
+//        first_name = data.map { it.first_name }[0],
+//        last_name = data.map { it.last_name }[0],
+//        email = data.map { it.email }[0]
+//    )
+//}

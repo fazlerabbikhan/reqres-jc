@@ -7,9 +7,9 @@ import retrofit2.http.Path
 
 interface ReqresApi {
 
-    @GET("/api/users")
-    suspend fun getUsers(): List<UserDto>
+    @GET("/api/users?per_page=12")
+    suspend fun getUsers(): UserDto
 
     @GET("/api/users/{userId}")
-    suspend fun getUserById(@Path("userId") coinId: String): UserDetailDto
+    suspend fun getUserById(@Path("userId") userId: String): UserDetailDto
 }

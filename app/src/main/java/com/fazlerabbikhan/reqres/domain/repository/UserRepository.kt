@@ -5,7 +5,7 @@ import com.fazlerabbikhan.reqres.data.remote.user_dto.UserDto
 
 interface UserRepository {
 
-    suspend fun getUsers(): List<UserDto>
+    suspend fun getUsers(): UserDto
 
     suspend fun getUserById(userId: String): UserDetailDto
 }

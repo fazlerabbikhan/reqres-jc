@@ -10,7 +10,7 @@ class UserRepositoryImpl @Inject constructor(
     private val api: ReqresApi
 ) : UserRepository {
 
-    override suspend fun getUsers(): List<UserDto> {
+    override suspend fun getUsers(): UserDto {
         return api.getUsers()
     }
 

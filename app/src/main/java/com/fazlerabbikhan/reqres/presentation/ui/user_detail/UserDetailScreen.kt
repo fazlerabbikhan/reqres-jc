@@ -24,9 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowRow
 
-
 @Composable
-fun CoinDetailScreen(
+fun UserDetailScreen(
     viewModel: UserDetailViewModel = hiltViewModel()
 ) {
     val state = viewModel.state.value
@@ -34,41 +33,38 @@ fun CoinDetailScreen(
         state.user?.let { user ->
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.Center
+                verticalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
                     text = "First Name: ${user.first_name}",
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(8f)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Last Name: ${user.last_name}",
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(8f)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Last Name: ${user.last_name}",
-                    style = MaterialTheme.typography.bodySmall,
+                    text = "Email: ${user.email}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.weight(8f)
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = "Support: ${user.supportUrl}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.weight(8f)
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = "Description: ${user.supportText}",
+                    style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(8f)
                 )
             }
-            Spacer(modifier = Modifier.height(15.dp))
-            Text(
-                text = "Email: ${user.email}",
-                style = MaterialTheme.typography.bodySmall
-            )
-            Spacer(modifier = Modifier.height(15.dp))
-            Text(
-                        text = "Support: ${user.supportUrl}",
-                        style = MaterialTheme.typography.bodySmall
-                    )
-            Spacer(modifier = Modifier.height(15.dp))
-            Text(
-                text = "Description: ${user.supportText}",
-                style = MaterialTheme.typography.bodySmall
-            )
         }
         if(state.error.isNotBlank()) {
             Text(
