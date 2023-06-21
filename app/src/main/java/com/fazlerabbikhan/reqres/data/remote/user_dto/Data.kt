@@ -2,7 +2,6 @@ package com.fazlerabbikhan.reqres.data.remote.user_dto
 
 import com.fazlerabbikhan.reqres.data.remote.user_detail_dto.UserDetailDto
 import com.fazlerabbikhan.reqres.domain.model.User
-import com.fazlerabbikhan.reqres.domain.model.UserDetail
 
 data class Data(
     val avatar: String,
