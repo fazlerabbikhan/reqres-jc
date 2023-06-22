@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.fazlerabbikhan.reqres'
+    namespace 'com.fazlerabbikhan.reqresjc'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.fazlerabbikhan.reqres"
+        applicationId "com.fazlerabbikhan.reqresjc"
         minSdk 24
         targetSdk 34
         versionCode 1
